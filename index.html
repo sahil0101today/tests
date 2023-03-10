@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact Form</title>
+	<style>
+		body {
+			background-image: url("Digital-Marketing-Write-For-Us.gif");
+			background-size: cover;
+			background-position: center;
+			font-family: Arial, sans-serif;
+		}
+
+		h1 {
+			text-align: center;
+			color: black;
+			margin-top: 0px;
+		}
+
+		form {
+			margin: 15px auto;
+			max-width: 500px;
+			background-color: white;
+			padding: 20px;
+			border-radius: 5px;
+			box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+		input, select {
+			margin: 10px;
+			padding: 10px;
+			border: none;
+			border-radius: 5px;
+			box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+			width: 100%;
+		}
+
+		select {
+			width: calc(100% - 20px);
+			background-color: white;
+			color: black;
+			cursor: pointer;
+		}
+
+		iframe {
+			width: 300px;
+			height: 300px;
+			margin: 10px;
+			border-radius: 5px;
+			box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+			background-color: white;
+		}
+
+		button {
+			margin: 10px;
+			padding: 10px 20px;
+			background-color: #4CAF50;
+			color: white;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+			transition: background-color 0.3s ease;
+		}
+
+		button:hover {
+			background-color: #3E8E41;
+		}
+	</style>
+</head>
+<body>
+	<form>
+		<input type="text" placeholder="Location" required>
+		<input type="number" placeholder="Time Period" required>
+		<select>
+			<option value="">Select a Category</option>
+			<option value="sales">Sales</option>
+			<option value="support">Support</option>
+			<option value="billing">Billing</option>
+		</select>
+		<button type="submit">Send</button>
+		<iframe src="l.png" frameborder="0"></iframe>
+	</form>
+	<script>
+		var dropdown = document.querySelector("select");
+		var iframe = document.querySelector("iframe");
+
+		dropdown.addEventListener("change", function() {
+			if (dropdown.value == "sales") {
+				iframe.src = "https://martechcloud.github.io/main/";
+			} else if (dropdown.value == "support") {
+				iframe.src = "https://www.example.com/support";
+			} else if (dropdown.value == "billing") {
+				iframe.src = "https://www.example.com/billing";
+			} else {
+				iframe.src = "https://martechcloud.github.io/main/";
+			}
+		});
+	</script>
+</body>
+</html>
